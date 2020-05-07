@@ -1,6 +1,5 @@
 spring:
-  profiles:
-    active: providerdept8801
+  profiles: providerconfig
   
 ---
 spring:
