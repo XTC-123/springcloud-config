@@ -1,14 +1,14 @@
 spring:
   profiles:
-    active: provider-dept-8801
+    active: providerdept8801
   
 ---
 spring:
-  profiles: provider-dept-8801
+  profiles: providerdept8801
 
 
 
 
 ---
 spring:
-  profiles: provider-dept-8802
+  profiles: providerdept8802
