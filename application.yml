@@ -1,14 +1,15 @@
 spring:
-  profiles: providerconfig
-  
+  profiles: 
+   active: 
+    - test01
 ---
 spring:
-  profiles: providerdept8801
+  profiles: test01
 info: 8001
 
 
 
 ---
 spring:
-  profiles: providerdept8802
+  profiles: test02
 info: 8002
