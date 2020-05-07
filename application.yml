@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: provider-dept-8801
+  
+---
+spring:
+  profiles: provider-dept-8801
+
+
+
+
+---
+spring:
+  profiles: provider-dept-8802
