@@ -4,10 +4,11 @@ spring:
 ---
 spring:
   profiles: providerdept8801
-
+info: 8001
 
 
 
 ---
 spring:
   profiles: providerdept8802
+info: 8002
