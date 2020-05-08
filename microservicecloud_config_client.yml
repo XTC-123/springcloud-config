@@ -2,7 +2,8 @@ spring:
   profiles:
     active:
       - pd8201
-      
+
+
 info:
   app.name: microservicecloud
   conpany.name: www.xtc.com
