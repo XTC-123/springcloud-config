@@ -5,9 +5,9 @@ spring:
 info:
   app.name: microservicecloud
   conpany.name: www.xtc.com
-  build.version: '@project.version@'
-  build.artifactId: '@project.artifactId@'
-  build.java.version: '${java.version}'
+  build.version: "@project.version@"
+  build.artifactId: "@project.artifactId@"
+  build.java.version: "${java.version}"
 mybatis:
   config-location: classpath:mybatis/mybatis.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
