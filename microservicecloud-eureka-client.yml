@@ -1,0 +1,60 @@
+spring:
+  profiles:
+    active:
+      - eureka7201
+---
+spring:
+  profiles: eureka7201
+
+server:
+  port: 7201
+
+eureka:
+  instance:
+    # eureka 实例主机名
+    hostname: eureka7201.com
+  client:
+    # 不把自己注册到 eureka
+    register-with-eureka: false
+    # 不从 eureka 上获取注册信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7202.com:7202/eureka/,http://eureka7203.com:7203/eureka/
+
+---
+spring:
+  profiles: eureka7202
+
+server:
+  port: 7202
+
+eureka:
+  instance:
+    # eureka 实例主机名
+    hostname: eureka7202.com
+  client:
+    # 不把自己注册到 eureka
+    register-with-eureka: false
+    # 不从 eureka 上获取注册信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7201.com:7201/eureka/,http://eureka7203.com:7203/eureka/
+---
+spring:
+  profiles: eureka7203
+
+server:
+  port: 7203
+
+eureka:
+  instance:
+    # eureka 实例主机名
+    hostname: eureka7203.com
+  client:
+    # 不把自己注册到 eureka
+    register-with-eureka: false
+    # 不从 eureka 上获取注册信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7202.com:7202/eureka/,http://eureka7201.com:7201/eureka/
+
