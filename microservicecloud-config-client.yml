@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-      - providerdept82001
+      - pd8201
 info:
   app.name: microservicecloud
   conpany.name: www.xtc.com
@@ -17,7 +17,7 @@ server:
   port: 8201
   
 spring:
-  profiles: providerdept8201
+  profiles: pd8201
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
@@ -40,7 +40,7 @@ server:
   port: 8202
 
 spring:
-  profiles: providerdept8202
+  profiles: pd8202
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
