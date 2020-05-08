@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-      - provider-dept-8201
+      - dev8201
 info:
   app.name: microservicecloud
   conpany.name: www.xtc.com
@@ -14,7 +14,7 @@ mybatis:
   type-aliases-package: com.xtc.springcloud.entities
 ---
 spring:
-  profiles: provider-dept-8201
+  profiles: dev8201
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
@@ -36,7 +36,7 @@ eureka:
     prefer-ip-address: true
 ---
 spring:
-  profiles: provider-dept-8202
+  profiles: dev8202
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
@@ -58,7 +58,7 @@ eureka:
     prefer-ip-address: true
 ---
 spring:
-  profiles: provider-dept-8203
+  profiles: dev8203
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
