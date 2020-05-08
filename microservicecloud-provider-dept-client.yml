@@ -1,0 +1,80 @@
+spring:
+  profiles:
+    active:
+      - provider-dept-8201
+info:
+  app.name: microservicecloud
+  conpany.name: www.xtc.com
+  build.version: @project.version@
+  build.artifactId: @project.artifactId@
+  build.java.version: ${java.version}
+mybatis:
+  config-location: classpath:mybatis/mybatis.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.xtc.springcloud.entities
+---
+spring:
+  profiles: provider-dept-8201
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_springcloud_01?serverTimezone=UTC
+  application:
+    name: microservicecloud-provider-dept-client
+
+server:
+  port: 8201
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7201.com:7201/eureka/,http://eureka7202.com:7202/eureka/,http://eureka7203.com:7203/eureka/
+  instance:
+    instance-id: microservicecloud-dept-client:8201
+    prefer-ip-address: true
+---
+spring:
+  profiles: provider-dept-8202
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_springcloud_02?serverTimezone=UTC
+  application:
+    name: microservicecloud-provider-dept-client
+
+server:
+  port: 8202
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7201.com:7201/eureka/,http://eureka7202.com:7202/eureka/,http://eureka7203.com:7203/eureka/
+  instance:
+    instance-id: microservicecloud-dept-client:8202
+    prefer-ip-address: true
+---
+spring:
+  profiles: provider-dept-8203
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_springcloud_03?serverTimezone=UTC
+  application:
+    name: microservicecloud-provider-dept-client
+
+server:
+  port: 8203
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7201.com:7201/eureka/,http://eureka7202.com:7202/eureka/,http://eureka7203.com:7203/eureka/
+  instance:
+    instance-id: microservicecloud-dept-client:8203
+    prefer-ip-address: true
