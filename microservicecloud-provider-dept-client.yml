@@ -2,6 +2,16 @@ spring:
   profiles:
     active:
       - dev8201
+info:
+  app.name: microservicecloud
+  conpany.name: www.xtc.com
+  build.version: '@project.version@'
+  build.artifactId: '@project.artifactId@'
+  build.java.version: '${java.version}'
+mybatis:
+  config-location: classpath:mybatis/mybatis.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.xtc.springcloud.entities
 ---
 spring:
   profiles: dev8201
@@ -24,16 +34,7 @@ eureka:
   instance:
     instance-id: microservicecloud-dept-client:8201
     prefer-ip-address: true
-info:
-  app.name: microservicecloud
-  conpany.name: www.xtc.com
-  build.version: @project.version@
-  build.artifactId: @project.artifactId@
-  build.java.version: ${java.version}
-mybatis:
-  config-location: classpath:mybatis/mybatis.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.xtc.springcloud.entities
+
 ---
 spring:
   profiles: dev8202
@@ -56,16 +57,7 @@ eureka:
   instance:
     instance-id: microservicecloud-dept-client:8202
     prefer-ip-address: true
-info:
-  app.name: microservicecloud
-  conpany.name: www.xtc.com
-  build.version: @project.version@
-  build.artifactId: @project.artifactId@
-  build.java.version: ${java.version}
-mybatis:
-  config-location: classpath:mybatis/mybatis.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.xtc.springcloud.entities
+
 ---
 spring:
   profiles: dev8203
@@ -88,13 +80,3 @@ eureka:
   instance:
     instance-id: microservicecloud-dept-client:8203
     prefer-ip-address: true
-info:
-  app.name: microservicecloud
-  conpany.name: www.xtc.com
-  build.version: @project.version@
-  build.artifactId: @project.artifactId@
-  build.java.version: ${java.version}
-mybatis:
-  config-location: classpath:mybatis/mybatis.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.xtc.springcloud.entities
